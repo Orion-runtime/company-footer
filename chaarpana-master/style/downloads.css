@@ -1,0 +1,463 @@
+/* GOOGLE FONT FAMILY */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Recursive:wght@300&family=Rubik:wght@300&display=swap');
+
+/* UNIVERSAL SELECTOR */
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+/*-------------NAVBAR STARTS-------------------*/
+
+.logo img {
+    max-width: 230px;
+}
+
+.navbar {
+    align-items   : center;
+    background    : #010A21;
+    display       : flex;
+    flex-direction: row;
+    font-family   : sans-serif;
+    padding       : 10px 50px;
+    position      : fixed;
+    width         : 100%;
+    z-index       : 999;
+    overflow      : hidden;
+}
+
+.push-left {
+    margin-left: auto;
+}
+
+/* Menu */
+.hamburger {
+    background: transparent;
+    border    : none;
+    cursor    : pointer;
+    display   : none;
+    outline   : none;
+    height    : 30px;
+    position  : relative;
+    width     : 30px;
+    z-index   : 1000;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: inline-block;
+    }
+}
+
+.hamburger-line {
+    background: #fff;
+    height    : 3px;
+    position  : absolute;
+    left      : 0;
+    transition: all 0.2s ease-out;
+    width     : 100%;
+    outline   : hidden;
+}
+
+.hamburger:hover .hamburger-line {
+    background: #777;
+    outline   : hidden;
+}
+
+.hamburger-line-top {
+    top: 3px;
+}
+
+.menu-active .hamburger-line-top {
+    top      : 50%;
+    transform: rotate(45deg) translatey(-50%);
+    outline  : hidden;
+}
+
+.hamburger-line-middle {
+    top      : 50%;
+    transform: translatey(-50%);
+}
+
+.menu-active .hamburger-line-middle {
+    left   : 50%;
+    opacity: 0;
+    width  : 0;
+}
+
+.hamburger-line-bottom {
+    bottom: 3px;
+}
+
+.menu-active .hamburger-line-bottom {
+    bottom   : 50%;
+    transform: rotate(-45deg) translatey(50%);
+}
+
+.nav-menu {
+    display   : flex;
+    list-style: none;
+    margin    : 0;
+    padding   : 0;
+    transition: all 0.25s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        background     : #010A21;
+        flex-direction : column;
+        justify-content: center;
+        opacity        : 0;
+        position       : fixed;
+        top            : 0;
+        right          : 0;
+        bottom         : 0;
+        left           : 0;
+        transform      : translatey(-100%);
+        text-align     : center;
+        z-index        : 999;
+        overflow       : hidden;
+    }
+
+    .menu-active .nav-menu {
+        transform: translatey(0%);
+        opacity  : 1;
+        overflow : hidden;
+    }
+}
+
+.nav-menu .menu-item a {
+    color          : #fff;
+    display        : block;
+    line-height    : 30px;
+    margin         : 0px 20px;
+    text-decoration: none;
+    text-transform : uppercase;
+    font-family    : 'Chakra Petch', sans-serif;
+}
+
+
+.nav-menu .menu-item a:hover {
+    color          : #777;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu .menu-item a {
+        font-size: 20px;
+        margin   : 8px;
+    }
+}
+
+.sub-nav {
+    display         : none;
+    position        : fixed;
+    background-color: #010A21;
+    padding         : 5px 5px;
+    list-style      : none;
+    width           : 230px;
+}
+
+@media screen and (max-width: 768px) {
+    .sub-nav {
+        position        : relative;
+        width           : 100%;
+        display         : none;
+        background-color: rgba(0, 0, 0, 0.20);
+        box-sizing      : border-box;
+    }
+}
+
+.nav__link:hover+.sub-nav {
+    display: block;
+}
+
+.sub-nav:hover {
+    display: block;
+}
+
+/*-------------------- NAVBAR ENDS -----------------*/
+
+/*-------------------COVER SECTION STARTS----------- */
+
+.demo {
+    font-family: sans-serif;
+}
+
+.demo .header {
+    height       : 100px;
+    border-bottom: 2px solid #ccc;
+}
+
+.demo .content-wrap {
+    padding: 20px 0;
+}
+
+.demo h1 {
+    text-align : center;
+    color      : white;
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+
+.demo h1 {
+    font-size    : 36px;
+    margin-bottom: 20px;
+    font-weight  : 100;
+}
+
+.demo h2 {
+    font-weight  : 800;
+    margin-bottom: 10px;
+    font-size    : 18px;
+}
+
+.demo .page-head-green-slice {
+    padding            : 10px 40px 140px;
+    background         : #010A21;
+    background-image   : url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/211696/slice.svg');
+    background-repeat  : no-repeat;
+    background-position: bottom center;
+    background-size    : cover;
+}
+
+/*--------------COVER SECTION ENDS-------------------------*/
+
+/* ---------------------DOWNLOADS PAGE STARTS-------------------------- */
+.download {
+    display    : inline-block;
+    margin-left: 20em;
+    min-width  : 50%;
+    overflow   : hidden;
+}
+
+.main-title {
+    color     : #1a1a1a;
+    font-size : 36px;
+    margin-top: 4vh;
+}
+
+
+.top {
+    position     : relative;
+    padding      : 20px 0;
+    border-bottom: 1px solid rgba(94, 94, 94, 0.2);
+}
+
+.sub-title {
+    color      : #00BCD4;
+    font-size  : 12px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+}
+
+.title {
+    color      : #1a1a1a;
+    font-size  : 20px;
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+
+.btn {
+    font-size  : 20px;
+    background : #010A21;
+    color      : white;
+    position   : absolute;
+    top        : 35px;
+    right      : 0;
+    padding    : 8px 15px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+@media (max-width: 860px) {
+
+    .download {
+        display  : inline-block;
+        margin   : 75px;
+        min-width: 50%;
+        overflow : hidden;
+    }
+
+    .btn {
+        font-size : 10px;
+        background: #010A21;
+        color     : white;
+        position  : relative;
+        text-align: center;
+        margin    : 18px 2px;
+        padding   : 10px 20px;
+    }
+
+    .top {
+        position     : relative;
+        padding      : 25px 0;
+        border-bottom: none;
+    }
+}
+
+
+/* ---------------------DOWNLOADS PAGE ENDS-------------------------- */
+
+/* ---------------------FOOTER STARTS ------*/
+#footer {
+    margin          : 0;
+    width           : 100%;
+    min-height      : 83vh;
+    color           : #fff;
+    background-color: #010A21;
+    text-align      : center;
+    margin-top      : 30vh;
+    overflow        : hidden;
+}
+
+header {
+    display        : flex;
+    justify-content: space-between;
+}
+
+#header-1 {
+    margin-top: 20px;
+}
+
+#header-2 {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+#header-2 h1 {
+    font-size: 3rem;
+}
+
+#header-3 {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#header-3>li {
+    padding: 4px 102px;
+}
+
+.start h1 a {
+    text-decoration: none;
+    color          : #fff;
+    font-size      : 60px;
+    margin-bottom  : 100px;
+    font-family    : 'Chakra Petch', sans-serif;
+}
+
+.start h1 a:hover {
+    color: #00BCD4;
+}
+
+
+.divider {
+    margin-bottom   : 20px;
+    margin-top      : 20px;
+    width           : 650px;
+    height          : 2px;
+    background-color: #fff;
+    display         : inline-block;
+}
+
+.foot-services {
+    margin-left: 110px;
+}
+
+.foot-services li a {
+    color          : #fff;
+    text-decoration: none;
+    font-size      : 20px;
+    font-family    : 'Rubik', sans-serif;
+    font-weight    : 600;
+    line-height    : 35px;
+}
+
+.foot-services li a:hover {
+    color: #00BCD4;
+}
+
+
+.section-items {
+    display        : flex;
+    text-align     : center;
+    justify-content: center;
+}
+
+.section-items a {
+    text-decoration: none;
+    color          : #fff;
+    margin         : 0px 23px;
+    padding        : 0px 18px;
+}
+
+.section-items a:hover {
+    color: #00BCD4;
+}
+
+
+.social {
+    bottom    : 0;
+    display   : flex;
+    list-style: none;
+    float     : right;
+    padding   : 20px;
+}
+
+
+.social li a {
+    margin: 10px;
+    color : #00BCD4;
+}
+
+@media(max-width:630px) {
+    header {
+        flex-direction: column;
+    }
+
+    #header-2 h1 {
+        font-size: 2rem;
+    }
+
+    #header-3 {
+        text-align: center;
+    }
+
+    #header-3 h1 {
+        font-size: 1.5rem;
+    }
+
+    footer>img {
+        width: 45%;
+    }
+
+    .section-items a {
+        margin : 0px 10px;
+        padding: 0px 0px;
+    }
+
+    section>h1 {
+        font-size: 2.5rem;
+    }
+
+    .divider {
+        width: 400px;
+
+    }
+}
+
+.foot {
+    border-top     : 1px solid #fff;
+    display        : flex;
+    justify-content: center;
+    background     : #010A21;
+    color          : #fff;
+    padding        : 10px;
+}
+
+/* -------------------------FOOTER ENDS------------------ */
